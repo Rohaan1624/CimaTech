@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CimaTech - Soluciones Locales</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/a2d0e2dd4e.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="navbar">
+    <div class="navContainer">
+        <div class="logo-wrapper">
+            <img src="assets/logo.png" alt="CimaTech Logo" class="logo" />
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon-menu" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="28" height="28">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <nav>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+         <a class="whatsapp-btn" href="https://wa.me/507XXXXXXX" target="_blank">Contáctanos por WhatsApp</a>
+    </div>
+    </header>
+
+
+    <section id="inicio" class="hero">
+        <div class="container hero-text">
+            <h1>Lleva tu negocio a la <span class="highlight">cima</span> con <strong>CimaTech</strong></h1>
+            <p>Impulsamos tu crecimiento con tecnología, diseño y automatización.</p>
+            <a href="https://wa.me/507XXXXXXX" class="cta">Contáctanos por WhatsApp</a>
+        </div>
+    </section>
+
+
+
+    <section id="servicios" class="services">
+        <div class="serviciosContainer">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="grid">
+                <!-- Sitios Web -->
+                <div class="service-card" onclick="window.location.href = 'servicios/planes-web.html';">
+                    <div class="icon blue"><i class="fas fa-globe"></i></div>
+                    <h3>Sitios Web para Negocios</h3>
+                    <p>Diseño de landing pages, tiendas virtuales y sitios corporativos adaptados a tu negocio.</p>
+                </div>
+                
+
+                <!-- Diseño de Logo -->
+                <div class="service-card" onclick="window.location.href = 'servicios/planes-logo.html';">
+                    <div class="icon red"><i class="fas fa-palette"></i></div>
+                    <h3>Diseño de Logo</h3>
+                    <p>Identidad visual profesional con versiones ajustadas a tus redes y necesidades de marca.</p>
+                </div>
+
+                <!-- Marketing Digital -->
+                <div class="service-card" onclick="window.location.href = 'servicios/planes-marketing.html';">
+                    <div class="icon blue"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Marketing Digital</h3>
+                    <p>Gestión de redes sociales, campañas publicitarias y diseño de contenido visual atractivo.</p>
+                </div>
+
+                <!-- Digitalización -->
+                <div class="service-card">
+                    <div class="icon red"><i class="fas fa-robot"></i></div>
+                    <h3>Digitalización y Automatización</h3>
+                    <p>Reservas online, catálogos con código QR, y sistemas de control con base de datos.</p>
+                </div>
+
+                <!-- Chatbots -->
+                <div class="service-card">
+                    <div class="icon blue"><i class="fas fa-comments"></i></div>
+                    <h3>Desarrollo de Chatbots</h3>
+                    <p>Chatbots inteligentes para WhatsApp, sitios web y redes, con lógica personalizada o IA avanzada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="CimaTech Logo" class="footer-logo" />
+                    <p>Soluciones digitales para negocios locales.</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><strong>Email:</strong> contacto@cimatech.com</p>
+                    <p><strong>Ubicación:</strong> Panamá, Ciudad de Panamá</p>
+                    <p><strong>Horario:</strong> Lunes a Viernes, 9am – 6pm</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                </div>
+
+                <div class="footer-bottom">
+                <p>© 2025 <strong>CimaTech</strong>. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

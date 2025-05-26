@@ -1,0 +1,569 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: url('../assets/background.png'); /* Reemplaza con la ruta a tu imagen */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #111;
+  
+}
+
+
+/* ====== Servicios Section ====== */
+
+.services {
+  padding: 4rem 2rem;
+  background-color: #fefefe;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.service-card {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.service-card .icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.icon.blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.icon.red {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Navbar */
+
+.navContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.navbar {
+  background: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo-wrapper {
+  height: 60px;            /* The visible height you want */
+  width: auto;
+  overflow: hidden;        
+  display: flex;
+  align-items: center;    
+}
+
+.logo {
+  height: 238.88px;            
+  object-fit: contain;     
+  display: block;
+}
+
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: large ;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5b;
+}
+
+
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 8rem 2rem;
+  background: url('../assets/pattern-bg.png') no-repeat center center;
+  background-size: cover;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.hero-text .highlight {
+  color: #ef4444;
+}
+
+.cta {
+  background-color: #25D366;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+}
+
+/* footer */
+.footer {
+  background-color: #111827; /* gris azul oscuro elegante */
+  color: #e5e7eb;
+  padding: 3rem 1rem;
+  font-size: 0.95rem;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  max-height: 40px;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  color: #9ca3af;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-contact h4,
+.footer-links h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.footer-contact p,
+.footer-links a {
+  color: #9ca3af;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+  border-top: 1px solid #374151;
+  padding-top: 1rem;
+}
+
+/* ========== Responsive Mobile Styles ========== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #1f2937;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .whatsapp-btn {
+    display: none;
+  }
+
+    .info {
+    flex-direction: column;
+  }
+
+  .web-benefits,
+  .web-process {
+    width: 100%;
+  }
+}
+
+/* planWeb */
+
+.hero-web {
+  background: #f9fafb;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.hero-web h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-web p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 4rem 1.5rem;
+}
+
+.plan-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.plan-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.plan-card .price {
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  color: #444;
+}
+
+.plan-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.cta-final {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #fefefe;
+}
+
+.cta-final h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* === PLANES WEB PAGE === */
+
+.hero-web {
+  background: #f9fafb;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.hero-web h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-web p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Plan Cards */
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 4rem 1.5rem;
+}
+
+.plan-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.plan-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.plan-card .price {
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  color: #444;
+}
+
+.plan-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Beneficios */
+.web-benefits {
+  background: #ffffff;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.web-benefits h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.benefit-list li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Proceso */
+.web-process {
+  background: #f9fafb;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.web-process h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.process-steps {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
+.process-steps li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* FAQ */
+.web-faq {
+  background: #ffffff;
+  padding: 4rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.web-faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+}
+
+.faq-item h4 {
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* CTA Final */
+.cta-final {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #fefefe;
+}
+
+.cta-final h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.cta {
+  background-color: #25D366;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #1ebe5b;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 1.5rem;
+  flex-wrap: wrap; /* Para que se apilen en pantallas pequeñas */
+}
+
+.web-benefits,
+.web-process {
+  flex: 1 1 45%;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Centrado del contenido */
+.web-benefits h2,
+.web-process h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-list,
+.process-steps {
+  padding-left: 1.2rem;
+}
