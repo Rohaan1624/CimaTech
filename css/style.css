@@ -548,3 +548,83 @@ body {
 .process-steps {
   padding-left: 1.2rem;
 }
+#sitio-web{
+  margin-top: 30px;
+  height: 40rem;
+  border-radius: 10px;
+}
+
+.servIcons{
+  height: 100% ;
+}
+
+/* === Página de Diseño de Logotipo === */
+.logo-service {
+  background: #fff;
+}
+
+.logo-hero {
+  text-align: center;
+  padding: 4rem 1.5rem 2rem;
+}
+
+.logo-hero h1 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.logo-hero p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.logo-hero-img {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.logo-benefits {
+  background: #f9fafb;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.logo-benefits h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.benefits-list li {
+  margin-bottom: 1rem;
+}
+
+.logo-benefits .cta {
+  background-color: #25D366;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.logo-benefits .cta:hover {
+  background-color: #1ebe5b;
+}
