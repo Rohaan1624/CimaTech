@@ -379,41 +379,60 @@ body {
 /* Plan Cards */
 .plan-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 4rem 1.5rem;
+  padding: 3rem 1.5rem;
 }
 
 .plan-card {
-  background: white;
-  padding: 2rem;
+  background: #ffffff;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  text-align: center;
+  padding: 2rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .plan-card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.plan-card .price {
-  color: #2563eb;
-  font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
+  color: #111827;
   margin-bottom: 1rem;
 }
 
+.plan-card p {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 .plan-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-  color: #444;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+  color: #374151;
 }
 
 .plan-card ul li {
   margin-bottom: 0.5rem;
 }
+
+.plan-card .ideal {
+  font-style: italic;
+  color: #6b7280;
+}
+
+.plan-card img{
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+}
+
 
 /* Beneficios */
 .web-benefits {
@@ -628,3 +647,4 @@ body {
 .logo-benefits .cta:hover {
   background-color: #1ebe5b;
 }
+
