@@ -1,14 +1,15 @@
 
-body {
-  font-family: 'Segoe UI', sans-serif;
+* {
   margin: 0;
-  background: url('../assets/background.png'); /* Reemplaza con la ruta a tu imagen */
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #111;
-  
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f5f8fb;
+  color: #1f2a3b;
+  line-height: 1.5;
 }
 
 
@@ -84,7 +85,6 @@ body {
 .navContainer {
   width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -140,59 +140,318 @@ body {
   color: #2563eb;
 }
 
-.whatsapp-btn {
-  background-color: #25D366;
+.cotizar-btn {
+  background-color: #2563EB;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  border: none;
   transition: background-color 0.3s ease;
+  margin-left: 170.28px;
 }
 
-.whatsapp-btn:hover {
-  background-color: #1ebe5b;
+.cotizar-btn:hover {
+  background-color: hsl(221, 83%, 43%);
+  cursor: pointer;
 }
 
 
+/* hero */
 
-/* Hero */
+
+/* ------------- Hero Section ------------- */
 .hero {
-  text-align: center;
-  padding: 8rem 2rem;
-  background: url('../assets/pattern-bg.png') no-repeat center center;
-  background-size: cover;
+  padding: 4rem 1rem;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
-  color: #1f2937;
+.hero__contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap; /* Permite que baje en pantallas estrechas */
+}
+
+/* --- Columna Izquierda: Texto --- */
+.hero__texto {
+  flex: 1 1 400px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #e5e8ff;
+  color: #3b49df;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
   margin-bottom: 1rem;
 }
 
-.hero-text p {
-  font-size: 1.25rem;
-  color: #4b5563;
+.hero__titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.destacado {
+  background: linear-gradient(to right, #5b30cd, #f3877b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__subtitulo {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+
+.hero__botones {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Botón Primario */
+.btn--primario {
+  background-color: #375bff;
+  color: #ffffff;
+}
+
+.btn--primario:hover {
+  background-color: #2a49d1;
+}
+
+/* Botón Secundario */
+.btn--secundario {
+  background-color: transparent;
+  color: #375bff;
+  border: 2px solid #375bff;
+}
+
+.btn--secundario:hover {
+  background-color: #375bff;
+  color: #ffffff;
+}
+
+/* --- Columna Derecha: Imagen + Card --- */
+.hero__imagen {
+  flex: 1 1 450px;
+  position: relative; /* Contenedor relativo para posicionar card absoluto */
+  display: flex;
+  justify-content: center;
+}
+
+.hero__img-principal {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+/* Floating Card */
+.card-flotante {
+  position: absolute;
+  bottom: -20px;    /* Ajusta para que asome un poco debajo de la imagen */
+  left: 20px;       /* Desplazamiento desde el borde izquierdo de la imagen */
+  background-color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 180px;
+}
+
+/* Icono dentro de la card */
+
+.icono {
+  font-size: 1.5rem;
+  color: #375bff;
+}
+
+.card-flotante__texto {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  color: #1f2a3b;
+}
+
+.card-flotante__texto strong {
+  font-size: 1rem;
+  margin-bottom: 0.125rem;
+}
+
+/* ------------- Responsive ------------- */
+@media (max-width: 900px) {
+  .hero__contenedor {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero__texto {
+    margin-top: 2rem;
+  }
+  .hero__botones {
+    justify-content: center;
+  }
+  .card-flotante {
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ------------- SECCIÓN “Nuestros Servicios” ------------- */
+.servicios {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+}
+
+.servicios__contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título y subtítulo */
+.servicios__titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.servicios__subtitulo {
+  font-size: 1rem;
+  color: #4a5568;
   margin-bottom: 2rem;
 }
 
-.hero-text .highlight {
-  color: #ef4444;
+/* Grid de tarjetas */
+.servicios__grid {
+  display: grid;
+  gap: 2rem;
+  /* Mínimo 280px por columna, tantas como quepan */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
-.cta {
-  background-color: #25D366;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.3s ease;
+/* Estilo de cada tarjeta */
+.servicio-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cta:hover {
+.servicio-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  /* Opcional: agranda un poco la sombra para enfatizar elevación */
 }
+/* Icono dentro de un cuadrado de color */
+.icono-cuadro {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Variantes de color para el cuadrado del icono */
+.icono-cuadro--azul {
+  background-color: #375bff;
+}
+
+.icono-cuadro--rojo {
+  background-color: #ff4d4f;
+}
+
+/* Título de la tarjeta */
+.servicio-card__titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1f2a3b;
+}
+
+/* Descripción breve */
+.servicio-card__descripcion {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Para que el link quede abajo en tarjetas altas */
+}
+
+/* Etiquetas (tags) */
+.servicio-card__etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.etiqueta {
+  background-color: #eef2ff;
+  color: #3b49df;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Enlace “Más Información” */
+.servicio-card__link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #375bff;
+  text-decoration: none;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.servicio-card__link:hover {
+  color: #2a49d1;
+}
+
+/* ------------- RESPONSIVE ------------- */
+@media (max-width: 600px) {
+  .servicio-card__descripcion {
+    font-size: 0.9rem;
+  }
+  .servicio-card__link {
+    font-size: 0.85rem;
+  }
+}
+
+
 
 /* footer */
 .footer {
@@ -287,364 +546,431 @@ body {
   .whatsapp-btn{
     display: none;
   }
+  .beneficios__grid,
+  .clientes__grid {
+    grid-template-columns: 1fr;
+  }
+  .contacto__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* planWeb */
 
-.hero-web {
-  background: #f9fafb;
+/* ============================================
+   SECCIÓN: NUESTROS CLIENTES
+   ============================================ */
+.nuestros-clientes {
+  padding: 4rem 1rem;
+  background-color: #f5f8fb;
+}
+
+.nuestros-clientes .container {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
-  padding: 4rem 1.5rem;
 }
 
-.hero-web h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-web p {
-  font-size: 1.1rem;
-  color: #555;
-}
-
-.plan-grid {
+.clientes__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 4rem 1.5rem;
+  margin-top: 2rem;
+  /* Mínimo 260px por tarjeta, tantas columnas como permitan */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
-.plan-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
+.cliente-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.plan-card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.cliente-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.plan-card .price {
-  color: #2563eb;
-  font-weight: bold;
+.cliente-card__icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
   font-size: 1.25rem;
   margin-bottom: 1rem;
 }
 
-.plan-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-  color: #444;
+/* Colores para íconos de clientes */
+.icono-cuadro--azul {
+  background-color: #375bff;
 }
 
-.plan-card ul li {
+.icono-cuadro--rojo {
+  background-color: #ff4d4f;
+}
+
+.icono-cuadro--verde {
+  background-color: #4ade80;
+}
+
+.icono-cuadro--morado {
+  background-color: #b779f7;
+}
+
+.cliente-card__titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
+  color: #1f2a3b;
 }
 
-.cta-final {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: #fefefe;
+.cliente-card__descripcion {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.4;
 }
 
-.cta-final h3 {
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-}
-
-/* === PLANES WEB PAGE === */
-
-.hero-web {
-  background: #f9fafb;
-  text-align: center;
-  padding: 4rem 1.5rem;
-}
-
-.hero-web h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-web p {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Plan Cards */
-.plan-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 3rem 1.5rem;
-}
-
-.plan-card {
-  background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.plan-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.plan-card h2 {
-  font-size: 1.6rem;
-  color: #111827;
-  margin-bottom: 1rem;
-}
-
-.plan-card p {
-  font-size: 1rem;
-  color: #374151;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.plan-card ul {
-  padding-left: 1.2rem;
-  margin-bottom: 1rem;
-  list-style-type: disc;
-  color: #374151;
-}
-
-.plan-card ul li {
-  margin-bottom: 0.5rem;
-}
-
-.plan-card .ideal {
-  font-style: italic;
-  color: #6b7280;
-}
-
-.plan-card img{
-  width: 100%;
-  align-self: center;
-  justify-self: center;
-}
-
-
-/* Beneficios */
-.web-benefits {
-  background: #ffffff;
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
-
-.web-benefits h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.benefit-list {
-  list-style: none;
-  padding: 0;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.benefit-list li {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-/* Proceso */
-.web-process {
-  background: #f9fafb;
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
-
-.web-process h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.process-steps {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-  list-style: none;
-  padding: 0;
-}
-
-.process-steps li {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-/* FAQ */
-.web-faq {
-  background: #ffffff;
-  padding: 4rem 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.web-faq h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.faq-item {
-  margin-bottom: 2rem;
-}
-
-.faq-item h4 {
-  font-weight: bold;
-  color: #111827;
-  margin-bottom: 0.5rem;
-}
-
-.faq-item p {
-  color: #444;
-  line-height: 1.6;
-}
-
-/* CTA Final */
-.cta-final {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: #fefefe;
-}
-
-.cta-final h3 {
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-}
-
-.cta {
-  background-color: #25D366;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.cta:hover {
-  background-color: #1ebe5b;
-}
-
-.info {
+/* Resumen de clientes satisfechos */
+.clientes__resumen {
+  margin-top: 2.5rem;
   display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 4rem 1.5rem;
-  flex-wrap: wrap; /* Para que se apilen en pantallas pequeñas */
+  justify-content: center;
 }
 
-.web-benefits,
-.web-process {
-  flex: 1 1 45%;
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
+.resumen-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
 }
 
-/* Centrado del contenido */
-.web-benefits h2,
-.web-process h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.benefit-list,
-.process-steps {
-  padding-left: 1.2rem;
-}
-#sitio-web{
-  margin-top: 30px;
-  height: 40rem;
-  border-radius: 10px;
-}
-
-.servIcons{
-  height: 100% ;
-}
-
-/* === Página de Diseño de Logotipo === */
-.logo-service {
-  background: #fff;
-}
-
-.logo-hero {
-  text-align: center;
-  padding: 4rem 1.5rem 2rem;
-}
-
-.logo-hero h1 {
-  font-size: 2.5rem;
-  color: #1f2937;
-  margin-bottom: 1rem;
-}
-
-.logo-hero p {
-  font-size: 1.1rem;
-  color: #4b5563;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-}
-
-.logo-hero-img {
-  max-width: 300px;
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-}
-
-.logo-benefits {
-  background: #f9fafb;
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
-.logo-benefits h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #1f2937;
-}
-
-.benefits-list {
-  list-style: none;
-  padding: 0;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  text-align: center;
+/* Ícono del resumen */
+.resumen-card__icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
   font-size: 1rem;
-  color: #374151;
+  font-weight: 700;
 }
 
-.benefits-list li {
+/* Color para el círculo de +50 */
+.icono-resumen--azul {
+  background-color: #BFDBFE;
+}
+
+.resumen-card__texto {
+  text-align: left;
+}
+
+.resumen-card__texto strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2a3b;
+}
+
+.resumen-card__texto span {
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+/* ============================================
+   SECCIÓN: ¿POR QUÉ ELEGIR CIMATECH?
+   ============================================ */
+.por-que-elegir {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+}
+
+.por-que-elegir .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.beneficios__grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  /* Tres columnas en desktop, se adapta en pantallas pequeñas */
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.beneficio-card {
+  background-color: #f5f8fb;
+  border-radius: 0.75rem;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.beneficio-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.beneficio-card__icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
   margin-bottom: 1rem;
 }
 
-.logo-benefits .cta {
-  background-color: #25D366;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
+/* Colores para íconos de beneficios */
+.icono-resumen--azul {
+  background-color: #375bff;
+}
+
+.icono-resumen--rojo {
+  background-color: #ff4d4f;
+}
+
+.icono-resumen--verde {
+  background-color: #4ade80;
+}
+.icono-resumen--celeste{
+  background-color: #BFDBFE;
+}
+.icono-resumen--rojoclaro{
+  background-color: #FEE2E2;
+}
+.icono-resumen--verdeclaro{
+  background-color: #DCFCE7;
+}
+
+.beneficio-card__titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1f2a3b;
+}
+
+.beneficio-card__descripcion {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.4;
+}
+
+/* ============================================
+   UTILIDADES Y RESPONSIVE
+   ============================================ */
+.section__titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2a3b;
+}
+
+.section__subtitulo {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-top: 0.5rem;
+}
+
+/* Asegura separación vertical en pantallas pequeñas */
+
+/* =========================== 
+   SECCIÓN: CONTÁCTANOS
+   =========================== */
+.contacto {
+  padding: 4rem 1rem;
+  background-color: #f5f8fb;
+}
+
+.contacto .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Título y subtítulo (reutiliza utilidades generales) */
+.section__titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2a3b;
+}
+
+.section__subtitulo {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-top: 0.5rem;
+}
+
+/* Grid: dos columnas en desktop, apila en móvil */
+.contacto__grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ---- Información de Contacto ---- */
+.contacto__info {
+  text-align: left;
+}
+
+.contacto__seccion-titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2a3b;
+  margin-bottom: 1.5rem;
+}
+
+/* Cada item de contacto */
+.contacto__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Icono con fondo de color */
+.icono-cuadro {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+/* Colores de fondo para cada icono */
+.icono-cuadro--azul {
+  background-color: #375bff;
+}
+
+.icono-cuadro--rojo {
+  background-color: #ff4d4f;
+}
+
+.icono-cuadro--verde {
+  background-color: #4ade80;
+}
+
+.icono-cuadro--celeste{
+  background-color: #BFDBFE;
+}
+.icono-cuadro--rojoclaro{
+  background-color: #FEE2E2;
+}
+.icono-cuadro--verdeclaro{
+  background-color: #DCFCE7;
+}
+
+/* Texto junto al icono */
+.contacto__texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto__texto strong {
+  font-size: 1rem;
+  color: #1f2a3b;
+}
+
+.contacto__texto span {
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+/* ---- Card de WhatsApp ---- */
+.contacto__whatsapp-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Título dentro del card */
+.whatsapp-card__titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2a3b;
+  margin-bottom: 0.75rem;
+}
+
+/* Texto descriptivo */
+.whatsapp-card__descripcion {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* Botón de WhatsApp */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #25d366;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
   text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  transition: background 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
-.logo-benefits .cta:hover {
-  background-color: #1ebe5b;
+.btn-whatsapp i {
+  font-size: 1.25rem;
 }
 
+/* Hover del botón */
+.btn-whatsapp:hover {
+  background-color: #1da851;
+}
+
+
+#bolt{
+  color:#375bff;
+}
+
+.globe{
+  color: #ff4d4f;
+  
+}
+.robot{
+  color: #4ade80;
+}
+/* planWeb */
+.email{
+  color: #375bff;
+}
+.horario{
+  color: #4ade80;
+}
+.beneficio-card__icono1{
+  height: auto;
+  width: auto;
+  padding: 10px 12.5px;
+  border-radius: 50%;
+}

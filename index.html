@@ -19,81 +19,371 @@
                     <ul class="nav-links">
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#clientes">Clientes</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
-            <a class="whatsapp-btn" href="https://wa.me/507XXXXXXX" target="_blank">Contáctanos por WhatsApp</a>
+            <button class="cotizar-btn">Cotizar</button>
         </div>
         <div id="mobileMenu">
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#clientes">Clientes</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </header>
 
 
-    <section id="inicio" class="hero">
-        <div class="container hero-text">
-            <h1>Lleva tu negocio a la <span class="highlight">cima</span> con <strong>CimaTech</strong></h1>
-            <p>Impulsamos tu crecimiento con tecnología, diseño y automatización.</p>
-            <a href="https://wa.me/507XXXXXXX" class="cta">Contáctanos por WhatsApp</a>
-        </div>
-    </section>
+    <section class="hero">
+        <div class="hero__contenedor">
+        <!-- Columna izquierda: texto -->
+        <div class="hero__texto">
+            <!-- Badge superior -->
+            <span class="badge">Soluciones Digitales Profesionales</span>
 
+            <!-- Título principal -->
+            <h1 class="hero__titulo">
+            Lleva tu negocio<br />
+            a la <span class="destacado">cima</span> con CimaTech
+            </h1>
 
+            <!-- Subtítulo / descripción -->
+            <p class="hero__subtitulo">
+            Impulsamos tu crecimiento con tecnología, diseño y automatización.
+            Soluciones digitales personalizadas para negocios locales.
+            </p>
 
-    <section id="servicios" class="services">
-        <div class="serviciosContainer">
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <div class="grid">
-                <!-- Sitios Web -->
-                <div class="service-card" onclick="window.location.href = 'servicios/planes-web.html';">
-                    <div class="icon blue"><img src="assets/servicio1.png" class="servIcons"></div>
-                    <h3>Sitios Web para Negocios</h3>
-                    <p>Diseño de landing pages, tiendas virtuales y sitios corporativos adaptados a tu negocio.</p>
-                    <a href="servicios/planes-web.html">Mas Info</a>
-                </div>
-                
-
-                <!-- Diseño de Logo -->
-                <div class="service-card" onclick="window.location.href = 'servicios/planes-logo.html';">
-                    <div class="icon red"><img src="assets/servicio2.png" class="servIcons"></div>
-                    <h3>Diseño de Logo</h3>
-                    <p>Identidad visual profesional con versiones ajustadas a tus redes y necesidades de marca.</p>
-                    <a href="servicios/planes-logo.html">Mas Info</a>
-                </div>
-
-                <!-- Marketing Digital -->
-                <div class="service-card" onclick="window.location.href = 'servicios/planes-marketing.html';">
-                    <div class="icon blue"><img src="assets/servicio3.png" class="servIcons"></div>
-                    <h3>Marketing Digital</h3>
-                    <p>Gestión de redes sociales, campañas publicitarias y diseño de contenido visual atractivo.</p>
-                    <a href="servicios/planes-marketing.html">Mas Info</a>
-                </div>
-
-                <!-- Digitalización -->
-                <div class="service-card">
-                    <div class="icon red"><img src="assets/servicio4.png" class="servIcons"></div>
-                    <h3>Digitalización y Automatización</h3>
-                    <p>Reservas online, catálogos con código QR, y sistemas de control con base de datos.</p>
-                    <a href="servicios/planes-web.html">Mas Info</a>
-                </div>
-
-                <!-- Chatbots -->
-                <div class="service-card">
-                    <div class="icon blue"><img src="assets/servicio5.png" class="servIcons"></div>
-                    <h3>Desarrollo de Chatbots</h3>
-                    <p>Chatbots inteligentes para WhatsApp, sitios web y redes, con lógica personalizada o IA avanzada.</p>
-                    <a href="servicios/planes-web.html">Mas Info</a>
-                </div>
+            <!-- Botones -->
+            <div class="hero__botones">
+            <a href="#servicios" class="btn btn--primario">Ver Servicios →</a>
+            <a href="#contacto" class="btn btn--secundario">Contactar Ahora</a>
             </div>
         </div>
-    </section>
+
+        <!-- Columna derecha: imagen + floating card -->
+        <div class="hero__imagen">
+            <img
+            src="assets/Hero_Image.png"
+            alt="Ejemplo Hero CimaTech"
+            class="hero__img-principal"
+            />
+
+            <!-- Floating card sobre la imagen -->
+            <div class="card-flotante">
+            <div class="beneficio-card__icono1 icono-resumen--celeste"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-6 h-6 text-blue-600 email" data-lov-id="src/pages/Index.tsx:234:20" data-lov-name="Zap" data-component-path="src/pages/Index.tsx" data-component-line="234" data-component-file="Index.tsx" data-component-name="Zap" data-component-content="%7B%22className%22%3A%22w-6%20h-6%20text-blue-600%22%7D"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></div>
+            <div class="card-flotante__texto">
+                <strong>Tecnología Avanzada</strong>
+                <span>Soluciones modernas</span>
+            </div>
+            </div>
+        </div>
+        </div>
+  </section>
+
+   <!-- ==== NUESTROS SERVICIOS ==== -->
+  <section id="servicios" class="servicios">
+    <div class="servicios__contenedor">
+      <!-- Título de la sección -->
+      <h2 class="servicios__titulo">Nuestros Servicios</h2>
+      <p class="servicios__subtitulo">
+        Ofrecemos soluciones digitales completas para impulsar tu negocio
+      </p>
+
+      <!-- Grid de tarjetas -->
+      <div class="servicios__grid">
+        <!-- 1. Sitios Web para Negocios -->
+        <article class="servicio-card">
+          <div class="icono-cuadro icono-cuadro--azul">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-8 h-8 text-blue-600" data-lov-id="src/pages/Index.tsx:262:20" data-lov-name="Globe" data-component-path="src/pages/Index.tsx" data-component-line="262" data-component-file="Index.tsx" data-component-name="Globe" data-component-content="%7B%22className%22%3A%22w-8%20h-8%20text-blue-600%22%7D"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+          </div>
+          <h3 class="servicio-card__titulo">Sitios Web para Negocios</h3>
+          <p class="servicio-card__descripcion">
+            Diseño de landing pages, tiendas virtuales y sitios corporativos
+            adaptados a tu negocio.
+          </p>
+          <div class="servicio-card__etiquetas">
+            <span class="etiqueta">Landing Pages</span>
+            <span class="etiqueta">Tiendas Online</span>
+            <span class="etiqueta">Sitios Corporativos</span>
+          </div>
+          <a href="/servicios/planes-web.html" class="servicio-card__link">
+            Más Información →
+          </a>
+        </article>
+
+        <!-- 2. Diseño de Logo -->
+        <article class="servicio-card">
+          <div class="icono-cuadro icono-cuadro--rojo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette w-8 h-8 text-purple-600" data-lov-id="src/pages/Index.tsx:302:20" data-lov-name="Palette" data-component-path="src/pages/Index.tsx" data-component-line="302" data-component-file="Index.tsx" data-component-name="Palette" data-component-content="%7B%22className%22%3A%22w-8%20h-8%20text-purple-600%22%7D"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+          </div>
+          <h3 class="servicio-card__titulo">Diseño de Logo</h3>
+          <p class="servicio-card__descripcion">
+            Identidad visual profesional con versiones ajustadas a tus redes y
+            necesidades de marca.
+          </p>
+          <div class="servicio-card__etiquetas">
+            <span class="etiqueta">Identidad Visual</span>
+            <span class="etiqueta">Branding</span>
+            <span class="etiqueta">Adaptaciones</span>
+          </div>
+          <a href="#info-diseno-logo" class="servicio-card__link">
+            Más Información →
+          </a>
+        </article>
+
+        <!-- 3. Marketing Digital -->
+        <article class="servicio-card">
+          <div class="icono-cuadro icono-cuadro--azul">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-8 h-8 text-pink-600" data-lov-id="src/pages/Index.tsx:282:20" data-lov-name="Instagram" data-component-path="src/pages/Index.tsx" data-component-line="282" data-component-file="Index.tsx" data-component-name="Instagram" data-component-content="%7B%22className%22%3A%22w-8%20h-8%20text-pink-600%22%7D"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+          </div>
+          <h3 class="servicio-card__titulo">Marketing Digital</h3>
+          <p class="servicio-card__descripcion">
+            Gestión de redes sociales, campañas publicitarias y diseño de
+            contenido visual atractivo.
+          </p>
+          <div class="servicio-card__etiquetas">
+            <span class="etiqueta">Redes Sociales</span>
+            <span class="etiqueta">Campañas</span>
+            <span class="etiqueta">Contenido Visual</span>
+          </div>
+          <a href="#info-marketing-digital" class="servicio-card__link">
+            Más Información →
+          </a>
+        </article>
+
+        <!-- 4. Digitalización y Automatización -->
+        <article class="servicio-card">
+          <div class="icono-cuadro icono-cuadro--rojo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-8 h-8 text-red-500" data-lov-id="src/pages/Index.tsx:322:20" data-lov-name="Zap" data-component-path="src/pages/Index.tsx" data-component-line="322" data-component-file="Index.tsx" data-component-name="Zap" data-component-content="%7B%22className%22%3A%22w-8%20h-8%20text-red-500%22%7D"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+          </div>
+          <h3 class="servicio-card__titulo">
+            Digitalización y Automatización
+          </h3>
+          <p class="servicio-card__descripcion">
+            Reservas online, catálogos con código QR y sistemas de control con
+            base de datos.
+          </p>
+          <div class="servicio-card__etiquetas">
+            <span class="etiqueta">Reservas Online</span>
+            <span class="etiqueta">QR Codes</span>
+            <span class="etiqueta">Sistemas</span>
+          </div>
+          <a href="#info-digitalizacion" class="servicio-card__link">
+            Más Información →
+          </a>
+        </article>
+
+        <!-- 5. Desarrollo de Chatbots -->
+        <article class="servicio-card">
+          <div class="icono-cuadro icono-cuadro--azul">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot w-8 h-8 text-purple-600" data-lov-id="src/pages/Index.tsx:342:20" data-lov-name="Bot" data-component-path="src/pages/Index.tsx" data-component-line="342" data-component-file="Index.tsx" data-component-name="Bot" data-component-content="%7B%22className%22%3A%22w-8%20h-8%20text-purple-600%22%7D"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+          </div>
+          <h3 class="servicio-card__titulo">Desarrollo de Chatbots</h3>
+          <p class="servicio-card__descripcion">
+            Chatbots inteligentes para WhatsApp, sitios web y redes, con lógica
+            personalizada o IA avanzada.
+          </p>
+          <div class="servicio-card__etiquetas">
+            <span class="etiqueta">WhatsApp Bots</span>
+            <span class="etiqueta">IA Avanzada</span>
+            <span class="etiqueta">Automatización</span>
+          </div>
+          <a href="#info-chatbots" class="servicio-card__link">
+            Más Información →
+          </a>
+        </article>
+           </div>
+    </div>
+  </section>
+
+  <!-- =================== NUESTROS CLIENTES =================== -->
+<section id="nuestros-clientes" class="nuestros-clientes">
+  <div class="container">
+    <!-- Título y subtítulo -->
+    <h2 class="section__titulo">Nuestros Clientes</h2>
+    <p class="section__subtitulo">
+      Empresas que han confiado en CimaTech para su transformación digital
+    </p>
+
+    <!-- Grid de tarjetas de clientes -->
+    <div class="clientes__grid">
+      <!-- Cliente 1 -->
+      <article class="cliente-card">
+        <div class="cliente-card__icono icono-cuadro--azul">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <h3 class="cliente-card__titulo">Restaurante Local</h3>
+        <p class="cliente-card__descripcion">
+          Sistema de reservas online y menú digital con códigos QR.
+        </p>
+      </article>
+
+      <!-- Cliente 2 -->
+      <article class="cliente-card">
+        <div class="cliente-card__icono icono-cuadro--rojo">
+          <i class="fas fa-tshirt"></i>
+        </div>
+        <h3 class="cliente-card__titulo">Boutique de Moda</h3>
+        <p class="cliente-card__descripcion">
+          Tienda online completa con catálogo digital y pasarela de pagos.
+        </p>
+      </article>
+
+      <!-- Cliente 3 -->
+      <article class="cliente-card">
+        <div class="cliente-card__icono icono-cuadro--verde">
+          <i class="fas fa-tooth"></i>
+        </div>
+        <h3 class="cliente-card__titulo">Clínica Dental</h3>
+        <p class="cliente-card__descripcion">
+          Chatbot de WhatsApp para citas y sitio web informativo.
+        </p>
+      </article>
+
+      <!-- Cliente 4 -->
+      <article class="cliente-card">
+        <div class="cliente-card__icono icono-cuadro--morado">
+          <i class="fas fa-plane-departure"></i>
+        </div>
+        <h3 class="cliente-card__titulo">Agencia de Viajes</h3>
+        <p class="cliente-card__descripcion">
+          Marketing digital completo y gestión de redes sociales.
+        </p>
+      </article>
+    </div>
+
+    <!-- Resumen de clientes satisfechos -->
+    <div class="clientes__resumen">
+      <div class="resumen-card">
+        <div class="resumen-card__icono icono-resumen--azul">
+          <span>+50</span>
+        </div>
+        <div class="resumen-card__texto">
+          <strong>50+ Clientes Satisfechos</strong>
+          <span>En toda la región de Panamá</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ¿POR QUÉ ELEGIR CIMATECH? ============== -->
+<section id="por-que-elegir" class="por-que-elegir">
+  <div class="container">
+    <!-- Título y subtítulo -->
+    <h2 class="section__titulo">¿Por qué elegir CimaTech?</h2>
+    <p class="section__subtitulo">
+      Somos especialistas en transformación digital para negocios locales en Panamá
+    </p>
+
+    <!-- Grid de ventajas / beneficios -->
+    <div class="beneficios__grid">
+      <!-- Beneficio 1 -->
+      <div class="beneficio-card">
+        <div class="beneficio-card__icono icono-resumen--celeste">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-8 h-8 text-blue-600" data-lov-id="src/pages/Index.tsx:432:18" data-lov-name="Zap" data-component-path="src/pages/Index.tsx" data-component-line="432" data-component-file="Index.tsx" data-component-name="Zap" data-component-content="%7B%22className%22%3A%22w-8%20h-8%20text-blue-600%22%7D"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" id="bolt"></path></svg>
+        </div>
+        <h3 class="beneficio-card__titulo">Rápido y Eficiente</h3>
+        <p class="beneficio-card__descripcion">
+          Entregamos proyectos en tiempo récord sin comprometer la calidad.
+        </p>
+      </div>
+
+      <!-- Beneficio 2 -->
+      <div class="beneficio-card">
+        <div class="beneficio-card__icono icono-resumen--rojoclaro">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-8 h-8 text-red-500 globe" data-lov-id="src/pages/Index.tsx:440:18" data-lov-name="Globe" data-component-path="src/pages/Index.tsx" data-component-line="440" data-component-file="Index.tsx" data-component-name="Globe" data-component-content="%7B%22className%22%3A%22w-8%20h-8%20text-red-500%22%7D"><circle cx="12" cy="12" r="10" class="globe"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" class="globe"></path><path d="M2 12h20"></path></svg>
+        </div>
+        <h3 class="beneficio-card__titulo">Experiencia Local</h3>
+        <p class="beneficio-card__descripcion">
+          Conocemos el mercado panameño y las necesidades específicas.
+        </p>
+      </div>
+
+      <!-- Beneficio 3 -->
+      <div class="beneficio-card">
+        <div class="beneficio-card__icono icono-resumen--verdeclaro">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot w-8 h-8 text-green-600 robot" data-lov-id="src/pages/Index.tsx:448:18" data-lov-name="Bot" data-component-path="src/pages/Index.tsx" data-component-line="448" data-component-file="Index.tsx" data-component-name="Bot" data-component-content="%7B%22className%22%3A%22w-8%20h-8%20text-green-600%22%7D"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2" class="robot"></rect><path d="M2 14h2" class="robot"></path><path d="M20 14h2" class="robot"></path><path d="M15 13v2" class="robot"></path><path d="M9 13v2" class="robot"></path></svg>
+        </div>
+        <h3 class="beneficio-card__titulo">Tecnología Avanzada</h3>
+        <p class="beneficio-card__descripcion">
+          Utilizamos las últimas tecnologías para mejores resultados.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contacto">
+  <div class="container">
+    <!-- Título y subtítulo -->
+    <h2 class="section__titulo">Contáctanos</h2>
+    <p class="section__subtitulo">
+      Estamos listos para impulsar tu negocio al siguiente nivel
+    </p>
+
+    <div class="contacto__grid">
+      <!-- 1. Información de Contacto -->
+      <div class="contacto__info">
+        <h3 class="contacto__seccion-titulo">Información de Contacto</h3>
+
+        <!-- Email -->
+        <div class="contacto__item">
+          <div class="icono-cuadro icono-cuadro--celeste">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-6 h-6 text-blue-600 email" data-lov-id="src/pages/Index.tsx:476:22" data-lov-name="Mail" data-component-path="src/pages/Index.tsx" data-component-line="476" data-component-file="Index.tsx" data-component-name="Mail" data-component-content="%7B%22className%22%3A%22w-6%20h-6%20text-blue-600%22%7D"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          </div>
+          <div class="contacto__texto">
+            <strong>Email</strong>
+            <span>contacto@cimatech.com</span>
+          </div>
+        </div>
+
+        <!-- Ubicación -->
+        <div class="contacto__item">
+          <div class="icono-cuadro icono-cuadro--rojoclaro">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-6 h-6 text-red-500 globe" data-lov-id="src/pages/Index.tsx:486:22" data-lov-name="MapPin" data-component-path="src/pages/Index.tsx" data-component-line="486" data-component-file="Index.tsx" data-component-name="MapPin" data-component-content="%7B%22className%22%3A%22w-6%20h-6%20text-red-500%22%7D"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="contacto__texto">
+            <strong>Ubicación</strong>
+            <span>Panamá, Ciudad de Panamá</span>
+          </div>
+        </div>
+
+        <!-- Horario -->
+        <div class="contacto__item">
+          <div class="icono-cuadro icono-cuadro--verdeclaro">
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-6 h-6 text-green-600 horario" data-lov-id="src/pages/Index.tsx:496:22" data-lov-name="Clock" data-component-path="src/pages/Index.tsx" data-component-line="496" data-component-file="Index.tsx" data-component-name="Clock" data-component-content="%7B%22className%22%3A%22w-6%20h-6%20text-green-600%22%7D"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="contacto__texto">
+            <strong>Horario</strong>
+            <span>Lunes a Viernes, 9am – 6pm</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Card de WhatsApp -->
+      <div class="contacto__whatsapp-card">
+        <h3 class="whatsapp-card__titulo">¿Listo para comenzar?</h3>
+        <p class="whatsapp-card__descripcion">
+          Contáctanos por WhatsApp y recibe una consulta gratuita para tu proyecto.
+        </p>
+        <a
+          href="https://wa.me/5050000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-whatsapp"
+        >
+          <i class="fab fa-whatsapp"></i> Escribir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="contacto">
         <footer class="footer">
