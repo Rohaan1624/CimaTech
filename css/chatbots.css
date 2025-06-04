@@ -68,12 +68,17 @@ body {
   color: #375bff;
 }
 .logo-wrapper {
-  flex: 1;
-  text-align: center;
+  height: 60px;            /* The visible height you want */
+  width: auto;
+  overflow: hidden;        
+  display: flex;
+  align-items: center;    
 }
+
 .logo {
-  max-height: 50px;
-  object-fit: contain;
+  height: 238.88px;            
+  object-fit: contain;     
+  display: block;
 }
 .cotizar-btn {
   background-color: #2563eb;
@@ -505,3 +510,4 @@ body {
   background-color: #f3f4f6;
   color: #1e40af;
 }
+
