@@ -905,15 +905,17 @@ body {
   text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }
 
 /* Título dentro del card */
 .whatsapp-card__titulo {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: bold;
   color: #1f2a3b;
   margin-bottom: 0.75rem;
+  align-self: flex-start;
+  justify-self: start;
 }
 
 /* Texto descriptivo */
@@ -949,7 +951,6 @@ body {
   background-color: #1da851;
 }
 
-
 #bolt{
   color:#375bff;
 }
@@ -974,3 +975,4 @@ body {
   padding: 10px 12.5px;
   border-radius: 50%;
 }
+

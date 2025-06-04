@@ -1,0 +1,825 @@
+/* ===========================
+   RESET / BASE
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #faf9fc; /* Suave rosa pálido en body */
+  color: #1f2a3b;
+  line-height: 1.5;
+}
+
+/* ===========================
+   UTILIDADES GENERALES
+   =========================== */
+.section__titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2a3b;
+  margin-bottom: 0.5rem;
+}
+.section__subtitulo {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+.navbar {
+  background: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1f2a3b;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.header__volver i {
+  font-size: 1rem;
+}
+.header__volver:hover {
+  color: #375bff;
+}
+.header__logo-wrapper {
+  flex: 1;
+  text-align: center;
+}
+.header__logo {
+  max-height: 50px;
+  object-fit: contain;
+}
+.header__whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #25d366;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.header__whatsapp-btn i {
+  font-size: 1rem;
+}
+.header__whatsapp-btn:hover {
+  background-color: #1da851;
+}
+
+/* ===========================
+   HERO: Diseño de Logo
+   =========================== */
+.logo-hero {
+  background-color: #fdf5fb; /* Rosa pálido */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.logo-hero__contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.logo-hero__badge {
+  display: inline-block;
+  background-color: #ede4f8;
+  color: #7e22ce;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.logo-hero__titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.destacado {
+  background: linear-gradient(to right, #7e22ce, #d946ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo-hero__subtitulo {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Imagen central */
+.logo-hero__imagen-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.logo-hero__imagen {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Floating card */
+.logo-hero__card-flotante {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background-color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 200px;
+}
+.icono-cuadro {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+.icono--morado {
+  background-color: #c084fc;
+}
+.logo-hero__card-texto {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.logo-hero__card-texto strong {
+  font-size: 1rem;
+  color: #1f2a3b;
+  margin-bottom: 0.25rem;
+}
+.logo-hero__card-texto span {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+@media (max-width: 900px) {
+  .logo-hero__card-flotante {
+    bottom: -16px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* ===========================
+   SECCIÓN: Pasos de Diseño de Logo
+   =========================== */
+.info-diseno-logo {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+.info-diseno-logo .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.diseno-logo__grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.paso {
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.paso:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+.paso__titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2a3b;
+  margin-bottom: 0.5rem;
+}
+.paso__descripcion {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* CTA final dentro de la sección de pasos */
+.diseno-logo__cta {
+  margin-top: 2.5rem;
+}
+.btn-diseno-logo {
+  display: inline-block;
+  background-color: #7e22ce;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.btn-diseno-logo:hover {
+  background-color: #5b21b6;
+}
+
+@media (max-width: 768px) {
+  .diseno-logo__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   FOOTER OSCURO
+   =========================== */
+.footer-final {
+  background-color: #111827;
+  color: #e5e7eb;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.footer-final__contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+/* Columna Brand */
+.footer-final__columna--brand .footer-final__logo {
+  max-height: 40px;
+  margin-bottom: 0.75rem;
+}
+.footer-final__columna--brand .footer-final__texto {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+/* Encabezados */
+.footer-final__heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+/* Lista de enlaces */
+.footer-final__lista {
+  list-style: none;
+  padding: 0;
+}
+.footer-final__lista li {
+  margin-bottom: 0.5rem;
+}
+.footer-final__lista a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-final__lista a:hover {
+  color: #ffffff;
+}
+/* Contacto en footer */
+.footer-final__columna--contacto p {
+  margin-bottom: 0.5rem;
+  color: #9ca3af;
+}
+/* Divider */
+.footer-final__divider {
+  border-top: 1px solid #374151;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+/* Pie de página */
+.footer-final__bottom {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+@media (max-width: 768px) {
+  .footer-final__contenedor {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-final__columna--links,
+  .footer-final__columna--contacto {
+    margin-top: 1.5rem;
+  }
+}
+
+/* ======================================
+   SECCIÓN: Nuestro Proceso de Diseño
+   ====================================== */
+.proceso-diseno {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.proceso-diseno .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Título y subtítulo (utilizan las clases globales) */
+.section__titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2a3b;
+  margin-bottom: 0.5rem;
+}
+.section__subtitulo {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor de la lista de pasos */
+.proceso-diseno__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Cada paso-item usa flex para alinear icono y contenido */
+.paso-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Icono cuadrado */
+.paso-item__icono {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-top: 4px; /* Ajuste leve para centrar con el contenido */
+}
+
+/* Variantes de color para icono */
+.icono--azul {
+  background-color: #375bff;
+}
+.icono--morado {
+  background-color: #8b5cf6;
+}
+.icono--verde {
+  background-color: #22c55e;
+}
+.icono--naranja {
+  background-color: #f97316;
+}
+.icono--rojo {
+  background-color: #ef4444;
+}
+
+/* Contenido del paso (número + tarjeta) */
+.paso-item__contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Número del paso */
+.paso-item__numero {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #1f2937;
+  border-radius: 999px;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Título del paso */
+.paso-item__titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2a3b;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Descripción del paso */
+.paso-item__descripcion {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+/* Responsive: en pantallas pequeñas, espacia un poco más cada paso */
+@media (max-width: 600px) {
+  .paso-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .paso-item__icono {
+    margin-top: 0;
+  }
+  .paso-item__contenido {
+    width: 100%;
+  }
+  .paso-item__descripcion {
+    padding: 1rem;
+  }
+}
+
+.logo-wrapper {
+  height: 60px;            /* The visible height you want */
+  width: auto;
+  overflow: hidden;        
+  display: flex;
+  align-items: center;    
+}
+
+.logo {
+  height: 238.88px;            
+  object-fit: contain;     
+  display: block;
+}
+
+.cotizar-btn {
+  background-color: #2563EB;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.header-planes__volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1f2a3b;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.one {
+  background-color: #375bff;
+}
+.two {
+  background-color: #8b5cf6;
+}
+.three {
+  background-color: #22c55e;
+}
+.four {
+  background-color: #f97316;
+}
+.five {
+  background-color: #ef4444;
+}
+
+/* ================================================
+   SECCIÓN: ¿Qué incluye nuestro servicio?
+   ================================================ */
+/* ================================================
+   SECCIÓN: ¿Qué incluye nuestro servicio?
+   ================================================ */
+.incluye-servicio {
+  padding: 4rem 1rem;
+  background-color: #fafafa; /* Fondo muy claro */
+  text-align: center;
+}
+
+.incluye-servicio .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------
+   GRID: 2 columnas en pantallas grandes
+   ---------------------------------------- */
+.incluye-servicio__grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  /* Dos columnas de igual ancho */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* En pantallas pequeñas, pasa a 1 columna */
+@media (max-width: 768px) {
+  .incluye-servicio__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   TARJETA: incluye-servicio__card
+   ========================================== */
+.incluye-servicio__card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.incluye-servicio__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícono superior de la tarjeta */
+.incluye-servicio__icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ede4f8; /* Lila muy claro */
+  color: #8b5cf6;             /* Lila */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Variante de color si quieres más control (opcional) */
+.icono--morado-claro {
+  background-color: #ede4f8;
+  color: #8b5cf6;
+}
+
+.incluye-servicio__card-titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2a3b;
+  margin-bottom: 0.5rem;
+}
+
+.incluye-servicio__card-texto {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.4;
+  text-align: center;
+}
+
+
+/* ============================================
+   SECCIÓN: Ejemplos de Nuestro Trabajo (Logos)
+   ============================================ */
+.ejemplos-trabajo {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.ejemplos-trabajo .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ejemplos-trabajo__grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  /* Tres columnas en desktop, se adaptan en móvil */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.ejemplos-trabajo__card {
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ejemplos-trabajo__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ejemplos-trabajo__icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ede4f8;
+  color: #8b5cf6;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ejemplos-trabajo__titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2a3b;
+  margin-bottom: 0.25rem;
+}
+
+.ejemplos-trabajo__descripcion {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* ============================================
+   SECCIÓN: CTA FINAL – ¿Listo para crear tu logo?
+   ============================================ */
+.cta-logo-final {
+  background: linear-gradient(to right, #8b5cf6, #ec4899); /* Degradado lila → rosado */
+  color: #ffffff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.cta-logo-final__contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-logo-final__titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cta-logo-final__subtitulo {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-cta-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  color: #8b5cf6;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-cta-logo i {
+  font-size: 1rem;
+}
+
+.btn-cta-logo:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #6d28d9;
+}
+
+/* ============================================
+   FOOTER OSCURO (repite del diseño anterior)
+   ============================================ */
+.footer-final {
+  background-color: #111827;
+  color: #e5e7eb;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.footer-final__contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-final__columna--brand .footer-final__logo {
+  max-height: 40px;
+  margin-bottom: 0.75rem;
+}
+
+.footer-final__columna--brand .footer-final__texto {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-final__heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.footer-final__lista {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-final__lista li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-final__lista a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-final__lista a:hover {
+  color: #ffffff;
+}
+
+.footer-final__columna--contacto p {
+  margin-bottom: 0.5rem;
+  color: #9ca3af;
+}
+
+.footer-final__divider {
+  border-top: 1px solid #374151;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.footer-final__bottom {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .incluye-servicio__grid,
+  .ejemplos-trabajo__grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-final__contenedor {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-final__columna--links,
+  .footer-final__columna--contacto {
+    margin-top: 1.5rem;
+  }
+}
+

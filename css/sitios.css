@@ -1,46 +1,677 @@
-.features-section {
-  padding: 4rem 2rem;
-  background-color: #f9fafb;
+/* ===========================
+   RESET / BASE
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f5f8fb;
+  color: #1f2a3b;
+  line-height: 1.5;
+}
+
+/* ===========================
+   HEADER – PLANES DE SITIO WEB
+   =========================== */
+.header-planes {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-planes__contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Enlace "Volver" */
+.header-planes__volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1f2a3b;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.header-planes__volver i {
+  font-size: 1rem;
+}
+.header-planes__volver:hover {
+  color: #375bff;
+}
+
+/* Logo en el header */
+.header-planes__logo-wrapper {
+  flex: 1;
+  text-align: center;
+}
+.header-planes__logo {
+  max-height: 50px;
+  object-fit: contain;
+}
+
+/* Botón "Cotizar" */
+.btn-cotizar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #25b54b; /* verde */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.btn-cotizar i {
+  font-size: 1rem;
+}
+.btn-cotizar:hover {
+  background-color: #1f9e3c;
+}
+
+/* ===========================
+   HERO / PRIMERA SECCIÓN
+   =========================== */
+.planes-hero {
+  padding: 4rem 1rem;
+  background-color: #f0f4ff; /* un tinte muy suave de azul para diferenciar */
+}
+
+.planes-hero__contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.section-title {
-  font-size: 2.2rem;
-  margin-bottom: 3rem;
-  color: #1f2937;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-}
-
-.feature-card {
-  background: #ffffff;
-  border-radius: 1rem;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-}
-
-.feature-card img {
-  width: 60px;
+/* Badge superior */
+.planes-hero__badge {
+  display: inline-block;
+  background-color: #e5e8ff;
+  color: #3b49df;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
   margin-bottom: 1rem;
 }
 
-.feature-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: #111827;
+/* Título principal */
+.planes-hero__titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.destacado {
+  background: linear-gradient(to right, #375bff, #a23ad6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.feature-card p {
+/* Subtítulo / descripción */
+.planes-hero__subtitulo {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Imagen central */
+.planes-hero__imagen-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.planes-hero__imagen {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Floating card */
+.planes-hero__card-flotante {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background-color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 200px;
+}
+
+/* Icono dentro del floating card */
+.icono-cuadro {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+.icono-cuadro--azul {
+  background-color: #375bff;
+}
+
+/* Texto del floating card */
+.planes-hero__card-texto {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.planes-hero__card-texto strong {
+  font-size: 1rem;
+  color: #1f2a3b;
+  margin-bottom: 0.25rem;
+}
+.planes-hero__card-texto span {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* Responsive: ajusta card e imagen en pantallas pequeñas */
+@media (max-width: 900px) {
+  .planes-hero__card-flotante {
+    bottom: -16px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.logo-wrapper {
+  height: 60px;            /* The visible height you want */
+  width: auto;
+  overflow: hidden;        
+  display: flex;
+  align-items: center;    
+}
+
+.logo {
+  height: 238.88px;            
+  object-fit: contain;     
+  display: block;
+}
+
+.cotizar-btn {
+  background-color: #2563EB;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+
+.beneficio-card__icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+
+}
+
+.icono-resumen--azul {
+  background-color: #375bff;
+}
+
+.icono-resumen--rojo {
+  background-color: #ff4d4f;
+}
+
+.icono-resumen--verde {
+  background-color: #4ade80;
+}
+.icono-resumen--celeste{
+  background-color: #BFDBFE;
+}
+.icono-resumen--rojoclaro{
+  background-color: #FEE2E2;
+}
+.icono-resumen--verdeclaro{
+  background-color: #DCFCE7;
+}
+.globe{
+  color: #375bff;
+  
+}
+
+/* ===========================
+   NUESTROS PLANES
+   =========================== */
+.nuestros-planes {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.nuestros-planes .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título y subtítulo ya definidos en estilo global:
+   .section__titulo y .section__subtitulo */
+
+.planes__grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* ===========================
+   PLAN CARD
+   =========================== */
+.plan-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.plan-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen y icono superpuesto */
+.plan-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.plan-card__imagen {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.plan-card__icono {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #375bff; /* valor por defecto, se sobreescribe abajo */
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+/* Variantes de color para icono en cada card */
+.icono--azul {
+  background-color: #375bff;
+}
+.icono--rojo {
+  background-color: #ff4d4f;
+}
+.icono--verde {
+  background-color: #4ade80;
+}
+
+/* Contenido textual dentro de la card */
+.plan-card__contenido {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Título de la plan card */
+.plan-card__titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2a3b;
+  margin-bottom: 0.5rem;
+}
+
+/* Descripción breve */
+.plan-card__descripcion {
   font-size: 0.95rem;
-  color: #555;
+  color: #4a5568;
+  margin-bottom: 1rem;
   line-height: 1.5;
 }
+
+/* Lista de características */
+.plan-card__list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.plan-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.93rem;
+  color: #4a5568;
+  line-height: 1.4;
+}
+.plan-card__list li i {
+  color: #22c55e; /* verde para el check */
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+/* “Uso ideal” */
+.plan-card__usage {
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Botón “Solicitar Cotización” */
+.plan-card__button {
+  margin-top: auto;
+  display: inline-block;
+  text-align: center;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.plan-card__button:hover {
+  background-color: #1e4bb8;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .planes__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   SECCIÓN: ¿QUÉ INCLUYE NUESTRO SERVICIO WEB?
+   =========================== */
+.que-incluye {
+  padding: 4rem 1rem;
+  background-color: #f5f8fb;
+  text-align: center;
+}
+
+/* Mantener misma .container que en otras secciones */
+.que-incluye .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid de tarjetas */
+.incluye__grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  /* Cada tarjeta ocupa mínimo 280px, y repite tantas columnas como quepan */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* ===========================
+   TARJETA: incluye-card
+   =========================== */
+.incluye-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.incluye-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Icono en la parte superior de la tarjeta */
+.incluye-card__icono {
+  width: 56px;
+  height: 56px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Variantes de color para cada icono */
+.icono--azul {
+  background-color: #375bff;
+}
+.icono--verde {
+  background-color: #4ade80;
+}
+.icono--rojo {
+  background-color: #ff4d4f;
+}
+.icono--morado {
+  background-color: #c084fc;
+}
+.icono--naranja {
+  background-color: #fdba74;
+}
+
+/* Título dentro de la tarjeta */
+.incluye-card__titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2a3b;
+  margin-bottom: 0.75rem;
+}
+
+/* Descripción dentro de la tarjeta */
+.incluye-card__descripcion {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* ===========================
+   RESPONSIVE / MÓVIL
+   =========================== */
+@media (max-width: 768px) {
+  .incluye__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================================
+   SECCIÓN: CTA FINAL (GRADIENTE)
+   ====================================== */
+.cta-final {
+  background: linear-gradient(
+    to right,
+    #375bff,  /* Azul */
+    #6b21a8,  /* Morado intermedio */
+    #e11d48   /* Rojo/rosado */
+  );
+  color: #ffffff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.cta-final__contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-final__titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cta-final__subtitulo {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffffff;
+  color: #375bff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-cta i {
+  font-size: 1rem;
+}
+
+/* Hover */
+.btn-cta:hover {
+  background-color: #e5e7eb;
+  color: #1e40af;
+}
+
+/* ======================================
+   FOOTER OSCURO
+   ====================================== */
+.footer-final {
+  background-color: #111827;  /* Azul muy oscuro / casi negro */
+  color: #e5e7eb;             /* Gris claro */
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.footer-final__contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Columna 1: Brand */
+.footer-final__columna--brand .footer-final__logo {
+  max-height: 40px;
+  margin-bottom: 0.75rem;
+}
+
+.footer-final__columna--brand .footer-final__texto {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Encabezados en footer */
+.footer-final__heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+/* Lista de enlaces */
+.footer-final__lista {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-final__lista li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-final__lista a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-final__lista a:hover {
+  color: #ffffff;
+}
+
+/* Columna Contacto: párrafos */
+.footer-final__columna--contacto p {
+  margin-bottom: 0.5rem;
+  color: #9ca3af;
+}
+
+/* Línea divisoria */
+.footer-final__divider {
+  border-top: 1px solid #374151;  /* Gris oscuro */
+  margin: 2rem auto; 
+  max-width: 1200px;
+}
+
+/* Pie de página */
+.footer-final__bottom {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+/* Responsive: reduce columnas en pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-final__contenedor {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-final__columna--links,
+  .footer-final__columna--contacto {
+    margin-top: 1.5rem;
+  }
+}
+
+
