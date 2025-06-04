@@ -1,0 +1,522 @@
+/* ===========================
+   RESET / BASE
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #faf9fc; /* Suavísimo tono rosado claro */
+  color: #1f2a3b;
+  line-height: 1.5;
+}
+
+/* ===========================
+   UTILIDADES GENERALES
+   =========================== */
+.section__titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2a3b;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.section__subtitulo {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+.navbar {
+  background: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1f2a3b;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.header__volver i {
+  font-size: 1rem;
+}
+.header__volver:hover {
+  color: #375bff;
+}
+.header__logo-wrapper {
+  flex: 1;
+  text-align: center;
+}
+.header__logo {
+  max-height: 50px;
+  object-fit: contain;
+}
+.header__whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #25d366;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.header__whatsapp-btn i {
+  font-size: 1rem;
+}
+.header__whatsapp-btn:hover {
+  background-color: #1da851;
+}
+
+/* ===========================
+   HERO – Marketing en Instagram
+   =========================== */
+.hero-marketing {
+  background-color: #faf5fc; /* Tono muy suave rosado */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.hero-marketing__contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero-marketing__badge {
+  display: inline-block;
+  background-color: #ffe4f7;
+  color: #ec4899;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.hero-marketing__titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.highlight {
+  background: linear-gradient(to right, #ec4899, #f43f5e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-marketing__subtitulo {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Imagen central */
+.hero-marketing__imagen-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+.hero-marketing__imagen {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 1rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Card flotante en la esquina inferior derecha */
+.hero-marketing__card-flotante {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background-color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 200px;
+}
+.icono-cuadro {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+.icono--rosa {
+  background-color: #ffe4f7;
+  
+}
+.hero-marketing__card-texto {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.hero-marketing__card-texto strong {
+  font-size: 1rem;
+  color: #1f2a3b;
+  margin-bottom: 0.25rem;
+}
+.hero-marketing__card-texto span {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+@media (max-width: 900px) {
+  .hero-marketing__card-flotante {
+    bottom: -16px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* ===========================
+   NUESTRA ESTRATEGIA DE MARKETING
+   =========================== */
+.estrategia-marketing {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+}
+.estrategia-marketing .container {
+  margin: 0 auto;
+}
+
+/* Lista de pasos verticales */
+.estrategia-marketing__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Cada paso */
+.paso-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Icono de cada paso */
+.paso-item__icono {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-top: 4px; /* Ajuste vertical para centrar con texto */
+}
+
+.icono--rosa {
+  background-color: #ec4899;
+}
+.icono--morado {
+  background-color: #8b5cf6;
+}
+.icono--azul {
+  background-color: #375bff;
+}
+.icono--verde {
+  background-color: #22c55e;
+}
+
+/* Contenido de cada paso */
+.paso-item__contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Número redondo */
+.paso-item__numero {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #1f2937;
+  border-radius: 999px;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Título del paso */
+.paso-item__titulo {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2a3b;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Descripción del paso dentro de una “tarjeta” clara */
+.paso-item__descripcion {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+  background-color: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .paso-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .paso-item__icono {
+    margin-top: 0;
+  }
+  .paso-item__contenido {
+    width: 100%;
+  }
+  .paso-item__descripcion {
+    padding: 1rem;
+  }
+}
+
+/* ===========================
+   ¿QUÉ INCLUYE NUESTRO SERVICIO?
+   =========================== */
+.incluye-servicio {
+  padding: 4rem 1rem;
+  background-color: #fafafa;
+}
+.incluye-servicio .container {
+  margin: 0 auto;
+}
+
+.incluye-servicio__grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+}
+
+@media (max-width: 992px) {
+  .incluye-servicio__grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medias */
+  }
+}
+
+@media (max-width: 768px) {
+  .incluye-servicio__grid {
+    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+  }
+}
+
+/* Tarjeta individual */
+.incluye-servicio__card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.incluye-servicio__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Icono superior */
+.incluye-servicio__icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe4f7; /* Rosa suave */
+  color: #ec4899;             /* Rosa vibrante */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Variante rosa clara (puedes usar solo .incluye-servicio__icono si no quieres variante) */
+.icono--rosa-claro {
+  background-color: #ffe4f7;
+  color: #ec4899;
+}
+
+.incluye-servicio__card-titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2a3b;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.incluye-servicio__card-texto {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* ===========================
+   CTA FINAL: ¿Listo para hacer crecer tu Instagram?
+   =========================== */
+.cta-instagram-final {
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.cta-instagram-final__contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.cta-instagram-final__titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2a3b;
+}
+.cta-instagram-final__subtitulo {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-cta-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ec4899;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.btn-cta-instagram i {
+  font-size: 1rem;
+}
+.btn-cta-instagram:hover {
+  background-color: #d0267c;
+}
+
+/* ===========================
+   FOOTER OSCURO
+   =========================== */
+.footer-final {
+  background-color: #111827;
+  color: #e5e7eb;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.footer-final__contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.footer-final__columna--brand .footer-final__logo {
+  max-height: 40px;
+  margin-bottom: 0.75rem;
+}
+.footer-final__columna--brand .footer-final__texto {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.footer-final__heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+.footer-final__lista {
+  list-style: none;
+  padding: 0;
+}
+.footer-final__lista li {
+  margin-bottom: 0.5rem;
+}
+.footer-final__lista a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-final__lista a:hover {
+  color: #ffffff;
+}
+.footer-final__columna--contacto p {
+  margin-bottom: 0.5rem;
+  color: #9ca3af;
+}
+.footer-final__divider {
+  border-top: 1px solid #374151;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+.footer-final__bottom {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .incluye-servicio__grid,
+  .ejemplos-trabajo__grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-final__contenedor {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-final__columna--links,
+  .footer-final__columna--contacto {
+    margin-top: 1.5rem;
+  }
+}
