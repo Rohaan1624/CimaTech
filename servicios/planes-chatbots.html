@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desarrollo de Chatbots – CimaTech</title>
+  <!-- Enlaza tu hoja de estilos -->
+  <link rel="stylesheet" href="../css/chatbots.css" />
+  <!-- FontAwesome para los iconos -->
+  <script src="https://kit.fontawesome.com/336d1c49db.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- =====================
+       HEADER
+       ===================== -->
+  <header class="navbar">
+    <div class="navContainer">
+      <!-- Enlace de volver -->
+      <a href="../index.html" class="header-planes__volver">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5">
+          <path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path>
+        </svg>
+        Volver
+      </a>
+
+      <!-- Logo central -->
+      <div class="logo-wrapper">
+        <img src="../assets/logo.png" alt="CimaTech Logo" class="logo" />
+      </div>
+
+      <!-- Botón "Cotizar" a la derecha -->
+      <button class="cotizar-btn">Cotizar</button>
+    </div>
+  </header>
+
+  <!-- =====================
+       HERO – Chatbots
+       ===================== -->
+  <section class="hero-chatbots">
+    <div class="hero-chatbots__contenedor">
+      <!-- Badge / etiqueta -->
+      <span class="hero-chatbots__badge">Automatización Inteligente</span>
+
+      <!-- Título principal -->
+      <h1 class="hero-chatbots__titulo">
+        Chatbots que <span class="highlight-azul">transforman</span> tu atención al cliente
+      </h1>
+
+      <!-- Subtítulo / descripción -->
+      <p class="hero-chatbots__subtitulo">
+        Automatiza la atención al cliente con chatbots inteligentes para WhatsApp y sitio web. 
+        Respuestas 24/7, captura de leads y reducción de carga de trabajo.
+      </p>
+
+      <!-- Imagen + card flotante (sin botones en el hero) -->
+      <div class="hero-chatbots__imagen-wrapper">
+        <!-- Reemplaza la ruta por la imagen que desees -->
+        <img src="../assets/chatbot-hero.jpg" alt="Chatbots Inteligentes" class="hero-chatbots__imagen" />
+
+        <!-- Card flotante en esquina inferior derecha -->
+        <div class="hero-chatbots__card-flotante">
+          <div class="icono-cuadro icono--morado-claro">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="hero-chatbots__card-texto">
+            <strong>IA Avanzada</strong>
+            <span>Respuestas inteligentes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECCIÓN: Nuestros Servicios de Chatbots
+       ============================================= -->
+  <section id="servicios-chatbots" class="servicios-chatbots">
+    <div class="container">
+      <!-- Título y subtítulo -->
+      <h2 class="section__titulo">Nuestros Servicios de Chatbots</h2>
+      <p class="section__subtitulo">
+        Soluciones de chat automatizado diseñadas para mejorar la experiencia de tus clientes
+      </p>
+
+      <!-- Grid de 4 tarjetas -->
+      <div class="servicios-chatbots__grid">
+        <!-- 1. Chatbots para WhatsApp -->
+        <article class="chatbot-card">
+          <div class="icono-cuadro icono--azul-claro">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3 class="chatbot-card__titulo">Chatbots para WhatsApp</h3>
+          <p class="chatbot-card__descripcion">
+            Respuestas automáticas a preguntas frecuentes, menús interactivos y notificaciones proactivas.
+          </p>
+          <ul class="chatbot-card__lista">
+            <li><i class="fas fa-check-circle"></i> Respuestas 24/7</li>
+            <li><i class="fas fa-check-circle"></i> Menús interactivos</li>
+            <li><i class="fas fa-check-circle"></i> Notificaciones automáticas</li>
+          </ul>
+        </article>
+
+        <!-- 2. Chatbots para Sitio Web -->
+        <article class="chatbot-card">
+          <div class="icono-cuadro icono--azul-claro">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3 class="chatbot-card__titulo">Chatbots para Sitio Web</h3>
+          <p class="chatbot-card__descripcion">
+            Widget de chat integrado, recolección de leads y derivación a agentes humanos cuando sea necesario.
+          </p>
+          <ul class="chatbot-card__lista">
+            <li><i class="fas fa-check-circle"></i> Disponible 24/7</li>
+            <li><i class="fas fa-check-circle"></i> Captura de leads</li>
+            <li><i class="fas fa-check-circle"></i> Agente en vivo</li>
+          </ul>
+        </article>
+
+        <!-- 3. IA y Lógica Personalizada -->
+        <article class="chatbot-card">
+          <div class="icono-cuadro icono--azul-claro">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 class="chatbot-card__titulo">IA y Lógica Personalizada</h3>
+          <p class="chatbot-card__descripcion">
+            Procesamiento de lenguaje natural básico y flujos de conversación diseñados para tu negocio.
+          </p>
+          <ul class="chatbot-card__lista">
+            <li><i class="fas fa-check-circle"></i> Comprensión de intenciones</li>
+            <li><i class="fas fa-check-circle"></i> Flujos personalizados</li>
+            <li><i class="fas fa-check-circle"></i> Integración con CRM</li>
+          </ul>
+        </article>
+
+        <!-- 4. Beneficios Clave -->
+        <article class="chatbot-card">
+          <div class="icono-cuadro icono--azul-claro">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="chatbot-card__titulo">Beneficios Clave</h3>
+          <p class="chatbot-card__descripcion">
+            Atención 24/7, reducción de tiempos de respuesta y mejora de la experiencia de usuario.
+          </p>
+          <ul class="chatbot-card__lista">
+            <li><i class="fas fa-check-circle"></i> Atención continua</li>
+            <li><i class="fas fa-check-circle"></i> Respuestas inmediatas</li>
+            <li><i class="fas fa-check-circle"></i> Experiencia mejorada</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+    <!-- =============================================
+       SECCIÓN: Proceso de Desarrollo
+       ============================================= -->
+  <section id="proceso-desarrollo" class="proceso-desarrollo">
+    <div class="container">
+      <!-- Título y subtítulo -->
+      <h2 class="section__titulo">Proceso de Desarrollo</h2>
+      <p class="section__subtitulo">
+        Nuestro proceso estructurado garantiza chatbots efectivos y personalizados
+      </p>
+
+      <!-- Cuatro pasos horizontales -->
+      <div class="proceso-desarrollo__grid">
+        <!-- Paso 1 -->
+        <div class="paso-desarrollo">
+          <div class="paso-desarrollo__numero">1</div>
+          <h3 class="paso-desarrollo__titulo">Análisis de Necesidades</h3>
+          <p class="paso-desarrollo__descripcion">
+            Evaluamos tus procesos actuales y definimos objetivos específicos
+          </p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="paso-desarrollo">
+          <div class="paso-desarrollo__numero paso--morado">2</div>
+          <h3 class="paso-desarrollo__titulo">Diseño de Flujos</h3>
+          <p class="paso-desarrollo__descripcion">
+            Creamos conversaciones naturales y efectivas para tu audiencia
+          </p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="paso-desarrollo">
+          <div class="paso-desarrollo__numero paso--verde">3</div>
+          <h3 class="paso-desarrollo__titulo">Desarrollo e Integración</h3>
+          <p class="paso-desarrollo__descripcion">
+            Implementamos y conectamos con tus sistemas existentes
+          </p>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="paso-desarrollo">
+          <div class="paso-desarrollo__numero paso--rosa">4</div>
+          <h3 class="paso-desarrollo__titulo">Pruebas y Optimización</h3>
+          <p class="paso-desarrollo__descripcion">
+            Refinamos y optimizamos basados en datos reales de uso
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECCIÓN: CTA FINAL – Contacto por WhatsApp
+       ============================================= -->
+  <section class="cta-chatbots-final">
+    <div class="cta-chatbots-final__contenedor">
+      <h2 class="cta-chatbots-final__titulo">
+        ¿Listo para automatizar tu atención al cliente?
+      </h2>
+      <p class="cta-chatbots-final__subtitulo">
+        Comienza hoy y transforma la experiencia de tus clientes con chatbots inteligentes
+      </p>
+      <a
+        href="https://wa.me/5050000000"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-whatsapp-cta"
+      >
+        <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+
+  <!-- =====================
+       FOOTER
+       ===================== -->
+  <footer class="footer-final">
+    <div class="footer-final__contenedor">
+      <!-- Columna 1: Brand -->
+      <div class="footer-final__columna footer-final__columna--brand">
+        <img src="../assets/logo.png" alt="CimaTech Logo" class="footer-final__logo" />
+        <p class="footer-final__texto">Soluciones digitales para negocios locales.</p>
+      </div>
+      <!-- Columna 2: Enlaces -->
+      <div class="footer-final__columna footer-final__columna--links">
+        <h4 class="footer-final__heading">Enlaces</h4>
+        <ul class="footer-final__lista">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../index.html#servicios">Servicios</a></li>
+          <li><a href="../index.html#nuestros-clientes">Clientes</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <!-- Columna 3: Contacto -->
+      <div class="footer-final__columna footer-final__columna--contacto">
+        <h4 class="footer-final__heading">Contacto</h4>
+        <p><strong>Email:</strong> contacto@cimatech.com</p>
+        <p><strong>Ubicación:</strong> Panamá, Ciudad de Panamá</p>
+        <p><strong>Horario:</strong> Lunes a Viernes, 9am – 6pm</p>
+      </div>
+    </div>
+    <div class="footer-final__divider"></div>
+    <div class="footer-final__bottom">
+      <p>© 2025 <strong>CimaTech</strong>. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
