@@ -228,6 +228,19 @@ body {
   .servicios-chatbots__grid {
     grid-template-columns: 1fr;
   }
+  .logo-wrapper {
+  height: 100px;            /* The visible height you want */
+  width: auto;
+  overflow: hidden;        
+  display: flex;
+  align-items: center;    
+}
+
+.logo {
+  height: 130px;            
+  object-fit: contain;     
+  display: block;
+}
 }
 
 /* =============================================

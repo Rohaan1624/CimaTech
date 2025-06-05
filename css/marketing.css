@@ -553,4 +553,17 @@ body {
   .footer-final__columna--contacto {
     margin-top: 1.5rem;
   }
+  .logo-wrapper {
+  height: 100px;            /* The visible height you want */
+  width: auto;
+  overflow: hidden;        
+  display: flex;
+  align-items: center;    
+}
+
+.logo {
+  height: 130px;            
+  object-fit: contain;     
+  display: block;
+}
 }
