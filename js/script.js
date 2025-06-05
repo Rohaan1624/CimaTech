@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("modalCotizar");
     const btnCerrar = document.getElementById("btnCerrarModal");
     const overlay = modal.querySelector(".modal__overlay");
+    const solicitar = document.querySelectorAll(".plan-card__button")
+    console.log(solicitar)
 
     // 2) Mostrar el modal
     function abrirModal() {
@@ -22,6 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
     btnAbrir.addEventListener("click", abrirModal);
     btnCerrar.addEventListener("click", cerrarModal);
     overlay.addEventListener("click", cerrarModal);
+
+    solicitar.forEach(element => {
+        element.addEventListener("click",function () {
+            btnAbrir.click()
+        });
+    });
+    
 
     // Cerrar con tecla “Esc”
     document.addEventListener("keydown", function (e) {

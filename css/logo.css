@@ -826,5 +826,8 @@ body {
   .footer-final__columna--contacto {
     margin-top: 1.5rem;
   }
+  .cotizar-btn {
+    display: none;
+  }
 }
 

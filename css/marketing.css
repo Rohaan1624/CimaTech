@@ -231,6 +231,9 @@ body {
     right: 50%;
     transform: translateX(50%);
   }
+  .cotizar-btn {
+    display: none;
+  }
 }
 
 /* ===========================

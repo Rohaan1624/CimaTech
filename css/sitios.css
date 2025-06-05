@@ -426,6 +426,10 @@ body {
 @media (max-width: 768px) {
   .planes__grid {
     grid-template-columns: 1fr;
+
+  }
+  .cotizar-btn {
+    display: none;
   }
 }
 
