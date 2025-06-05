@@ -316,6 +316,12 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
+  .cotizar-btn{
+    display: none;
+  }
+  .nav-links{
+    display: none;
+  }
 }
 
 /* ------------- SECCIÓN “Nuestros Servicios” ------------- */
@@ -823,6 +829,12 @@ body {
   gap: 2rem;
   margin-top: 2rem;
   grid-template-columns: 1fr 1fr;
+}
+/* Grid: dos columnas en desktop, apila en móvil */
+@media (max-width: 768px) {
+  .contacto__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---- Información de Contacto ---- */
