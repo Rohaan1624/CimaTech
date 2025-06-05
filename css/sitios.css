@@ -681,7 +681,7 @@ body {
   .footer-final__columna--contacto {
     margin-top: 1.5rem;
   }
-    .logo-wrapper {
+  .logo-wrapper {
   height: 100px;            /* The visible height you want */
   width: auto;
   overflow: hidden;        
