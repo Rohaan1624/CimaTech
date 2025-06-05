@@ -5,31 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marketing en Instagram – CimaTech</title>
   <link rel="stylesheet" href="../css/marketing.css" />
+  <link rel="stylesheet" href="../css/modal.css" />
   <!-- FontAwesome para los iconos -->
   <script src="https://kit.fontawesome.com/336d1c49db.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- ===================== HEADER ===================== -->
-  <header class="navbar">
+<header class="navbar">
     <div class="navContainer">
-      <!-- Enlace de regresar -->
-      <a href="../index.html" class="header__volver">
-        <i class="fas fa-arrow-left"></i>
+      <!-- Enlace de volver -->
+      <a href="../index.html" class="header-planes__volver">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5">
+          <path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path>
+        </svg>
         Volver
       </a>
 
-      <!-- Logo centrado -->
-      <div class="header__logo-wrapper">
-        <img src="../assets/logo.png" alt="CimaTech Logo" class="header__logo" />
+      <!-- Logo central -->
+      <div class="logo-wrapper">
+        <img src="../assets/logo.png" alt="CimaTech Logo" class="logo" />
       </div>
 
-      <!-- Botón de WhatsApp -->
-      <a href="https://wa.me/5050000000" target="_blank" rel="noopener noreferrer" class="header__whatsapp-btn">
-        <i class="fab fa-whatsapp"></i>
-        Contáctanos por WhatsApp
-      </a>
+      <!-- Botón "Cotizar" a la derecha -->
+      <button class="cotizar-btn" id="btnCotizar">Cotizar</button>
     </div>
   </header>
+
+  <!-- ================================
+     MODAL DE COTIZACIÓN
+     ================================ -->
+<div id="modalCotizar" class="modal hidden">
+  <!-- Fondo semitransparente -->
+  <div class="modal__overlay"></div>
+
+  <!-- Caja blanca centrada -->
+  <div class="modal__contenido">
+    <!-- Botón de cerrar -->
+    <button class="modal__close" id="btnCerrarModal">&times;</button>
+
+    <!-- Título -->
+    <h2 class="modal__titulo">Solicitar Cotización</h2>
+
+    <!-- Formulario que ENVÍA a Formspree -->
+    <!-- Reemplaza /f/XXXXXXXX con tu Formspree endpoint -->
+    <form
+      action="https://formspree.io/f/mzzgzgvj"
+      method="POST"
+      class="modal__formulario"
+    >
+      <!-- Nombre -->
+      <label for="nombre" class="modal__label">Nombre *</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        class="modal__input"
+        placeholder="Tu nombre"
+        required
+      />
+
+      <!-- Email -->
+      <label for="email" class="modal__label">Email *</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="modal__input"
+        placeholder="tu@correo.com"
+        required
+      />
+
+      <!-- Teléfono -->
+      <label for="telefono" class="modal__label">Teléfono</label>
+      <input
+        type="tel"
+        id="telefono"
+        name="telefono"
+        class="modal__input"
+        placeholder="+507 6XXXXXXX"
+      />
+
+      <!-- Servicio de Interés -->
+      <label for="servicio" class="modal__label">Servicio de Interés *</label>
+      <input
+        type="text"
+        id="servicio"
+        name="servicio"
+        class="modal__input"
+        placeholder="Ej: Sitio Web, Logo, Marketing Digital..."
+        required
+      />
+
+      <!-- Mensaje -->
+      <label for="mensaje" class="modal__label">Mensaje</label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        class="modal__textarea"
+        placeholder="Cuéntanos más sobre tu proyecto..."
+        rows="4"
+      ></textarea>
+
+      <!-- Botón de enviar -->
+      <button type="submit" class="modal__submit">Enviar Cotización</button>
+    </form>
+  </div>
+</div>
 
   <!-- ================================ HERO ================================ -->
   <section class="hero-marketing">
@@ -83,7 +166,7 @@
             <i class="fa-solid fa-bullseye"></i>
           </div>
           <div class="paso-item__contenido">
-            <div class="paso-item__numero">1</div>
+            <div class="paso-item__numero icono--rosa">1</div>
             <h3 class="paso-item__titulo">Estrategia de Contenido</h3>
             <p class="paso-item__descripcion">
               Definición de objetivos (branding, generación de leads o ventas directas). Calendario editorial mensual con temas, formatos (post, carrusel, reels) y fechas clave (lanzamientos, promociones).
@@ -97,7 +180,7 @@
             <i class="fas fa-palette"></i>
           </div>
           <div class="paso-item__contenido">
-            <div class="paso-item__numero">2</div>
+            <div class="paso-item__numero icono--morado">2</div>
             <h3 class="paso-item__titulo">Diseño de Publicaciones y Creatividades</h3>
             <p class="paso-item__descripcion">
               Creación de imágenes y gráficos optimizados para el feed (1080×1080 px) y carruseles. Producción de reels cortos (hasta 30 seg) con subtítulos y llamados a la acción. Adaptación de colores y tipografías que refuercen tu identidad de marca.
@@ -111,7 +194,7 @@
             <i class="fas fa-user-friends"></i>
           </div>
           <div class="paso-item__contenido">
-            <div class="paso-item__numero">3</div>
+            <div class="paso-item__numero icono--azul">3</div>
             <h3 class="paso-item__titulo">Optimización de Perfil</h3>
             <p class="paso-item__descripcion">
               Redacción de biografía clara y persuasiva (uso de keywords y CTA). Configuración de botones de contacto (WhatsApp, email o llamada). Creación de destacados (stories fijas) agrupados por categorías: “Nosotros”, “Productos”, “Testimonios”, “Ofertas”.
@@ -125,7 +208,7 @@
             <i class="fas fa-comments"></i>
           </div>
           <div class="paso-item__contenido">
-            <div class="paso-item__numero">4</div>
+            <div class="paso-item__numero icono--verde">4</div>
             <h3 class="paso-item__titulo">Interacción y Moderación</h3>
             <p class="paso-item__descripcion">
               Respuesta oportuna a comentarios y mensajes directos. Monitoreo de menciones y colaboración con microinfluencers o cuentas aliadas.
@@ -258,5 +341,6 @@
       <p>© 2025 <strong>CimaTech</strong>. Todos los derechos reservados.</p>
     </div>
   </footer>
+  <script src="../js/script.js"></script>
 </body>
 </html>

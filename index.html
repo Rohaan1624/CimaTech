@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CimaTech - Soluciones Locales</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://kit.fontawesome.com/a2d0e2dd4e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/modal.css" />
+  <script src="https://kit.fontawesome.com/336d1c49db.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -25,7 +26,7 @@
                     </ul>
                 </div>
             </nav>
-            <button class="cotizar-btn">Cotizar</button>
+            <button class="cotizar-btn" id="btnCotizar">Cotizar</button>
         </div>
         <div id="mobileMenu">
             <ul class="nav-links">
@@ -38,8 +39,89 @@
         </div>
     </header>
 
+    <!-- ================================
+     MODAL DE COTIZACIÓN
+     ================================ -->
+<div id="modalCotizar" class="modal hidden">
+  <!-- Fondo semitransparente -->
+  <div class="modal__overlay"></div>
 
-    <section class="hero">
+  <!-- Caja blanca centrada -->
+  <div class="modal__contenido">
+    <!-- Botón de cerrar -->
+    <button class="modal__close" id="btnCerrarModal">&times;</button>
+
+    <!-- Título -->
+    <h2 class="modal__titulo">Solicitar Cotización</h2>
+
+    <!-- Formulario que ENVÍA a Formspree -->
+    <!-- Reemplaza /f/XXXXXXXX con tu Formspree endpoint -->
+    <form
+      action="https://formspree.io/f/mzzgzgvj"
+      method="POST"
+      class="modal__formulario"
+    >
+      <!-- Nombre -->
+      <label for="nombre" class="modal__label">Nombre *</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        class="modal__input"
+        placeholder="Tu nombre"
+        required
+      />
+
+      <!-- Email -->
+      <label for="email" class="modal__label">Email *</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="modal__input"
+        placeholder="tu@correo.com"
+        required
+      />
+
+      <!-- Teléfono -->
+      <label for="telefono" class="modal__label">Teléfono</label>
+      <input
+        type="tel"
+        id="telefono"
+        name="telefono"
+        class="modal__input"
+        placeholder="+507 6XXXXXXX"
+      />
+
+      <!-- Servicio de Interés -->
+      <label for="servicio" class="modal__label">Servicio de Interés *</label>
+      <input
+        type="text"
+        id="servicio"
+        name="servicio"
+        class="modal__input"
+        placeholder="Ej: Sitio Web, Logo, Marketing Digital..."
+        required
+      />
+
+      <!-- Mensaje -->
+      <label for="mensaje" class="modal__label">Mensaje</label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        class="modal__textarea"
+        placeholder="Cuéntanos más sobre tu proyecto..."
+        rows="4"
+      ></textarea>
+
+      <!-- Botón de enviar -->
+      <button type="submit" class="modal__submit">Enviar Cotización</button>
+    </form>
+  </div>
+</div>
+
+
+    <section id="inicio" class="hero">
         <div class="hero__contenedor">
         <!-- Columna izquierda: texto -->
         <div class="hero__texto">
@@ -173,7 +255,7 @@
             <span class="etiqueta">QR Codes</span>
             <span class="etiqueta">Sistemas</span>
           </div>
-          <a href="#info-digitalizacion" class="servicio-card__link">
+          <a href="/servicios/planes-datos.html" class="servicio-card__link">
             Más Información →
           </a>
         </article>
@@ -193,7 +275,7 @@
             <span class="etiqueta">IA Avanzada</span>
             <span class="etiqueta">Automatización</span>
           </div>
-          <a href="#info-chatbots" class="servicio-card__link">
+          <a href="/servicios/planes-chatbots.html" class="servicio-card__link">
             Más Información →
           </a>
         </article>

@@ -225,6 +225,11 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.cotizar-btn:hover {
+  background-color: hsl(221, 83%, 43%);
+  cursor: pointer;
+}
+
 
 .beneficio-card__icono {
   width: 48px;

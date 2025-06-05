@@ -66,13 +66,44 @@ body {
 .header__volver:hover {
   color: #375bff;
 }
-.header__logo-wrapper {
-  flex: 1;
-  text-align: center;
+
+.logo-wrapper {
+  height: 60px;            /* The visible height you want */
+  width: auto;
+  overflow: hidden;        
+  display: flex;
+  align-items: center;    
 }
-.header__logo {
-  max-height: 50px;
-  object-fit: contain;
+
+.logo {
+  height: 238.88px;            
+  object-fit: contain;     
+  display: block;
+}
+
+.cotizar-btn {
+  background-color: #2563EB;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.cotizar-btn:hover {
+  background-color: hsl(221, 83%, 43%);
+  cursor: pointer;
+}
+
+.header-planes__volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1f2a3b;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 .header__whatsapp-btn {
   display: inline-flex;
@@ -267,7 +298,7 @@ body {
   font-size: 1rem;
   font-weight: 700;
   color: #ffffff;
-  background-color: #1f2937;
+  
   border-radius: 999px;
   width: 24px;
   height: 24px;

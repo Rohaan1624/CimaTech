@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Planes de Sitios Web – CimaTech</title>
   <link rel="stylesheet" href="../css/sitios.css" />
+  <link rel="stylesheet" href="../css/modal.css">
   <!-- FontAwesome o la librería de íconos que utilices -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/336d1c49db.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -25,11 +26,90 @@
       </div>
 
       <!-- Botón "Cotizar" a la derecha -->
-      <button class="cotizar-btn">
-        Cotizar
-      </button>
+      <button class="cotizar-btn" id="btnCotizar">Cotizar</button>
     </div>
   </header>
+
+  <!-- ================================
+     MODAL DE COTIZACIÓN
+     ================================ -->
+<div id="modalCotizar" class="modal hidden">
+  <!-- Fondo semitransparente -->
+  <div class="modal__overlay"></div>
+
+  <!-- Caja blanca centrada -->
+  <div class="modal__contenido">
+    <!-- Botón de cerrar -->
+    <button class="modal__close" id="btnCerrarModal">&times;</button>
+
+    <!-- Título -->
+    <h2 class="modal__titulo">Solicitar Cotización</h2>
+
+    <!-- Formulario que ENVÍA a Formspree -->
+    <!-- Reemplaza /f/XXXXXXXX con tu Formspree endpoint -->
+    <form
+      action="https://formspree.io/f/mzzgzgvj"
+      method="POST"
+      class="modal__formulario"
+    >
+      <!-- Nombre -->
+      <label for="nombre" class="modal__label">Nombre *</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        class="modal__input"
+        placeholder="Tu nombre"
+        required
+      />
+
+      <!-- Email -->
+      <label for="email" class="modal__label">Email *</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="modal__input"
+        placeholder="tu@correo.com"
+        required
+      />
+
+      <!-- Teléfono -->
+      <label for="telefono" class="modal__label">Teléfono</label>
+      <input
+        type="tel"
+        id="telefono"
+        name="telefono"
+        class="modal__input"
+        placeholder="+507 6XXXXXXX"
+      />
+
+      <!-- Servicio de Interés -->
+      <label for="servicio" class="modal__label">Servicio de Interés *</label>
+      <input
+        type="text"
+        id="servicio"
+        name="servicio"
+        class="modal__input"
+        placeholder="Ej: Sitio Web, Logo, Marketing Digital..."
+        required
+      />
+
+      <!-- Mensaje -->
+      <label for="mensaje" class="modal__label">Mensaje</label>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        class="modal__textarea"
+        placeholder="Cuéntanos más sobre tu proyecto..."
+        rows="4"
+      ></textarea>
+
+      <!-- Botón de enviar -->
+      <button type="submit" class="modal__submit">Enviar Cotización</button>
+    </form>
+  </div>
+</div>
 
   <!-- ==================== HERO / PRIMERA SECCIÓN ==================== -->
   <section class="planes-hero">
@@ -337,6 +417,6 @@
 
 
 
-
+<script src="../js/script.js"></script>
 </body>
 </html>
